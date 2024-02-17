@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Decodificador de Texto</title>
 </head>
+
 <body>
     <h1>Decodificador de Texto - Alura Challenges Oracle ONE</h1>
-    <button id="btn" onclick="alerta()">Decodificar</button>
+
+    <div id="content">
+        <label for="texto">Digite o texto a ser encripitado/decriptado:</label>
+        <input type="text" id="texto" name="texto" required />
+        <div id="botoes">
+            <input type="submit" value="Encripitar" onclick="encriptHandle()" />
+            <input type="submit" value="Decriptar" onclick="decriptHandle()" />
+        </div>
+    </div>
+
+    <div>
+        <h2 id="titulo-resultado"></h2>
+        <p id="texto-decodificado"></p>
+        <input id="copiar" type="submit" value="copiar" hidden onclick="copy()">
+    </div>
     <script src="./scripts/script.js"></script>
 </body>
+
 </html>
